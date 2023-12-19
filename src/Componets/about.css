@@ -1,0 +1,9 @@
+.line{
+ text-align: center;
+}
+
+@media screen and (max-width: 449px) {
+    .line{
+        text-align: justify;
+    }
+}

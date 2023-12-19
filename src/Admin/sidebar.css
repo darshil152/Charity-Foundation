@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: calc(100% - 50px);
+    margin-left: auto;
+    padding: 15px;
+    height: 100%;
+    word-break: break-word;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    padding-top: 110px !important;
+    background-color: #3473c8;
+    transition: width 0.3s ease;
+    /* border-right: 1px #4d606e solid; */
+    padding-top: 15px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar .sidebar-position {
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    text-align: left;
+}
+
+/* .sidebar .sidebar-position:hover {
+    background-color: #12518b;
+    border-right: 5px white solid;
+} */
+
+.sidebar svg {
+    color: white;
+    min-width: 25px;
+}
+
+.sidebar span {
+    width: 0;
+    height: 0;
+    padding: 0 15px;
+    transition: width 0.3s ease;
+    color: white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar--open {
+    width: 250px;
+    transition: width 0.3s ease;
+    z-index: 10;
+}
+
+.sidebar--open .sidebar-position span {
+    display: block;
+    width: 100%;
+    height: auto;
+
+
+}
+
+
+.trigger {
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 12px 15px;
+}
+
+.center_profile_setting {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.anchor3 {
+    text-decoration: none;
+}
+
+.setting {
+    position: relative;
+    left: 200px;
+}
+
+.abc {
+    margin-left: 60px;
+}
+
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8;
+    display: none;
+
+}
+
+.sidebar-backdrop--open {
+    display: block;
+}
